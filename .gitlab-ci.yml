@@ -1,0 +1,13 @@
+before_script:
+  - python -m pip install -e .
+  - python -m pip install -r requirements.txt
+
+unittest:
+  script:
+    - python -m pip install -r requirements-tests.txt
+    - git submodule init && git submodule update
+    - py.test --cov retrying --cov-report term-missing tests/
+  except:
+    - docs
+  tags:
+    - python3

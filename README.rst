@@ -1,7 +1,7 @@
 Retrying
 ========
 
-Retrying is an Apache 2.0 licensed general-purpose retrying library, written in Python, to simplify the task of adding retry behavior to just about anything.
+Retrying is a MIT licensed general-purpose retrying library, written in Python 3.6, to simplify the task of adding retry behavior to just about anything.
 
 The simplest use case is retrying a flaky function whenever an Exception occurs until a value is returned.
 
@@ -155,10 +155,10 @@ API
                 raise IOError("Broken sauce, everything is hosed!!!111one")
             else:
                 return "Awesome sauce!"
+*   Returns useful control exceptions
 
 
-todo
+Todo
 ----
 
-*   asyncio support
-*   warning when passing iterators to func args
+*   Warning when passing iterators to func args
